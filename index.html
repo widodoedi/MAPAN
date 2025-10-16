@@ -1,1 +1,116 @@
+``html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Selamat Datang di Sapuran Mapan</title>
+<style>
+body {
+background-color: #007bff; / Warna latar belakang biru /
+color: white; / Warna teks putih /
+font-family: Arial, sans-serif;
+text-align: center;
+margin: 0;
+padding: 0;
+}
+h1 {
+margin-top: 20px;
+}
+.service {
+margin: 20px 0;
+}
+.gallery {
+position: relative;
+max-width: 600px; / Atur lebar maksimum galeri /
+margin: auto;
+overflow: hidden;
+}
+.slides {
+display: none;
+}
+.active {
+display: block;
+}
+.slideshow-container {
+position: relative;
+}
+img {
+width: 100%; / Gambar akan menyesuaikan lebar container /
+}
+.prev, .next {
+cursor: pointer;
+position: absolute;
+top: 50%;
+width: auto;
+padding: 16px;
+color: white;
+font-weight: bold;
+font-size: 18px;
+transition: 0.6s ease;
+border-radius: 0 3px 3px 0;
+user-select: none;
+}
+.next {
+right: 0;
+border-radius: 3px 0 0 3px;
+}
+</style>
+</head>
+<body>
 
+<h1>Selamat Datang di Sapuran Mapan</h1>
+
+<!-- Ganti dengan URL logo Anda -->
+<img src="https://drive.google.com/uc?id=YOUR_LOGO_FILE_ID" alt="Logo" style="max-width: 200px; margin: 20px 0;">
+
+<div class="service">
+<h2>Layanan Adminduk Web App</h2>
+<!-- Ganti dengan URL Web App Anda -->
+<p><a href="https://link-to-your-web-app.com" target="_blank" style="color: yellow; text-decoration: underline;">Kunjungi Web App</a></p>
+</div>
+
+<div class="gallery">
+<h2>Galeri</h2>
+<div class="slideshow-container">
+
+<!-- Gambar Slideshow -->
+<div class="slides active">
+<!-- Ganti dengan URL gambar dari Google Drive -->
+<img src="https://drive.google.com/uc?id=YOUR_IMAGE_ID_1" alt="Gambar 1">
+</div>
+
+<div class="slides">
+<img src="https://drive.google.com/uc?id=YOUR_IMAGE_ID_2" alt="Gambar 2">
+</div>
+
+<div class="slides">
+<img src="https://drive.google.com/uc?id=YOUR_IMAGE_ID_3" alt="Gambar 3">
+</div>
+
+<!-- Tombol navigasi -->
+<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+<a class="next" onclick="plusSlides(1)">&#10095;</a>
+</div>
+</div>
+
+<script>
+let slideIndex = 0;
+showSlides();
+
+function showSlides() {
+let i;
+const slides = document.getElementsByClassName("slides");
+for (i = 0; i < slides.length; i++) {
+slides[i].style.display = "none";
+}
+slideIndex++;
+if (slideIndex > slides.length) {slideIndex = 1}
+slides[slideIndex-1].style.display = "block";
+setTimeout(showSlides, 3000); // Ubah gambar setiap 3 detik
+}
+
+function plusSlides(n) {
+slideIndex += n;
+if (slideIndex > slides.length) {slideIndex = 1}
+if (slideIndex <
